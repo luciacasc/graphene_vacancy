@@ -1,0 +1,40 @@
+&control
+    calculation='relax',
+    restart_mode='from_scratch',
+    prefix='vacancy',
+    pseudo_dir = '/home/lucia/Programmi/qe-6.7/pseudo',        
+    outdir='./outvac',
+/
+ &system
+    ibrav=  4, celldm(1) =13.9628670, celldm(3)=2.0, nat=17, ntyp= 1,
+    ecutwfc =35, ecutrho =200 ,    
+    occupations='smearing', smearing='gaussian', degauss=0.01,
+ /
+ &electrons
+    conv_thr = 1.0d-8
+ /
+ &ions
+ /
+ATOMIC_SPECIES
+C  12.0107 C.pbe-n-rrkjus_psl.1.0.0.UPF 
+ATOMIC_POSITIONS {angstrom}
+  C       0.0000000000       0.0000000000       0.0 
+  C      -1.2314742556       2.1329759788       0.0 
+  C      -2.4629485111       4.2659519577       0.0 
+  C       2.4629485111       0.0000000000       0.0 
+  C       1.2314742556       2.1329759788       0.0 
+  C       0.0000000000       4.2659519577       0.0 
+  C       4.9258970222       0.0000000000       0.0 
+  C       3.6944227666       2.1329759788       0.0 
+  C       2.4629485111       4.2659519577       0.0 
+  C       0.0000000000       1.4219840618       0.0 
+  C      -1.2314742556       3.5549600406       0.0 
+  C      -2.4629485111       5.6879360194       0.0 
+  C       2.4629485111       1.4219840618       0.0  
+  C       0.0000000000       5.6879360194       0.0 
+  C       4.9258970222       1.4219840618       0.0 
+  C       3.6944227666       3.5549600406       0.0 
+  C       2.4629485111       5.6879360194       0.0 
+K_POINTS {gamma}
+#K_POINTS {gamma}
+# 3 3 1 0 0 0
